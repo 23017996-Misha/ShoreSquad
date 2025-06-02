@@ -1,39 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ShoreSquad</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #f4faff; color: #1d3557; line-height: 1.6; }
+    header { background: #ffffff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; }
+    nav a { margin-left: 1.5rem; text-decoration: none; color: #1d3557; font-weight: 600; }
+    .btn-primary { background: #feca57; padding: 0.5rem 1rem; border-radius: 25px; color: #1d3557; font-weight: bold; text-decoration: none; }
+    .hero { background: linear-gradient(to right, #00c6ff, #0072ff); color: white; text-align: center; padding: 4rem 2rem; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+    .section { padding: 3rem 2rem; text-align: center; }
+    .section h2 { margin-bottom: 2rem; font-size: 1.8rem; }
+    iframe { width: 90%; max-width: 900px; height: 450px; border-radius: 12px; border: none; }
+    .weather-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    .card { background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); width: 200px; }
+    .card h3 { font-size: 1rem; margin-bottom: 0.5rem; color: #0072ff; }
+    .footer { background: #2c3e50; color: white; text-align: center; padding: 2rem 1rem; margin-top: 3rem; }
+    .footer a { color: #feca57; text-decoration: none; margin: 0 0.5rem; }
+  </style>
 </head>
 <body>
-  <h1>Welcome to ShoreSquad 🌊</h1>
-  <p>Next beach cleanup at Pasir Ris!</p>
+  <header>
+    <h2>ShoreSquad</h2>
+    <nav>
+      <a href="#">Find Cleanups</a>
+      <a href="#">Weather</a>
+      <a href="#">Community</a>
+      <a class="btn-primary" href="#">Join Squad</a>
+    </nav>
+  </header>
 
-  <!-- Google Maps iframe -->
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15955.067810182418!2d103.955574!3d1.381497!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMjInNTMuNCJOIDEwM8KwNTcnMjAuMSJF!5e0!3m2!1sen!2ssg!4v1680000000000"
-    width="600"
-    height="450"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <section class="hero">
+    <h1>Make Waves of Change</h1>
+    <p>Join the movement of young beach warriors keeping our shores clean</p>
+    <a class="btn-primary" href="#">Find Nearest Cleanup</a>
+  </section>
 
-  <script src="js/app.js"></script>
+  <section class="section">
+    <h2>Beach Cleanup Map</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15955.067810182418!2d103.955574!3d1.381497!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMjInNTMuNCJOIDEwM8KwNTcnMjAuMSJF!5e0!3m2!1sen!2ssg!4v1680000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
 
-  <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/683d0cd4e4683b190d613b3f/1isn7k8ap';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+  <section class="section">
+    <h2>Beach Weather</h2>
+    <div class="weather-cards">
+      <div class="card">
+        <h3>2025-06-03</h3>
+        <p>Late morning and early afternoon thundery showers</p>
+        <p>High: 34°C<br>Low: 25°C<br>Humidity: 55% - 95%<br>Wind: 10-20 km/h (SSW)</p>
+      </div>
+      <div class="card">
+        <h3>2025-06-04</h3>
+        <p>Morning thundery showers</p>
+        <p>High: 34°C<br>Low: 25°C<br>Humidity: 55% - 95%<br>Wind: 10-25 km/h (SSW)</p>
+      </div>
+      <div class="card">
+        <h3>2025-06-05</h3>
+        <p>Pre-dawn and early morning thundery showers</p>
+        <p>High: 33°C<br>Low: 24°C<br>Humidity: 55% - 95%<br>Wind: 10-20 km/h (S)</p>
+      </div>
+      <div class="card">
+        <h3>2025-06-06</h3>
+        <p>Late morning and early afternoon showers</p>
+        <p>High: 33°C<br>Low: 24°C<br>Humidity: 55% - 95%<br>Wind: 10-20 km/h (SSW)</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p><strong>ShoreSquad</strong> <br> Making beach cleanups fun and connected</p>
+    <p>Connect: <a href="#">About Us</a> | <a href="#">Contact</a> | <a href="#">Privacy Policy</a></p>
+    <p>&copy; 2025 ShoreSquad. All rights reserved.</p>
+  </footer>
 </body>
 </html>
